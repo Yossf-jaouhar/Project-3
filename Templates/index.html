@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+
+    <body>
+        
+        <header>
+            <h1 class="center">ASCII ART</h1>
+            
+        </header>
+        
+        <form action="/ascii-art" method="POST">
+            <h2 class="center" for="inputText">Enter your text:</h2>
+            <div class="center">
+                <textarea placeholder="Your text..." class="usertext" id="inputText" name="inputText" required maxlength="1000">{{.Text}}</textarea>
+            </div>
+            
+            <div class="center">
+                <label>Select banner style:</label>
+                <div class="sc">
+                    <input type="radio" id="banner1" name="banner" value="standard" {{if eq .Banner "standard"}}checked{{end}}>
+                    <label  for="banner1">Standard</label>
+                </div>
+                <div class="sc">
+                    <input type="radio" id="banner2" name="banner" value="shadow" {{if eq .Banner "shadow"}}checked{{end}}>
+                    <label for="banner2">Shadow</label>
+                </div>
+                <div class="sc" >
+                    <input type="radio" id="banner3" name="banner" value="thinkertoy" {{if eq .Banner "thinkertoy"}}checked{{end}}>
+                    <label for="banner3">Thinkertoy</label>
+                </div>
+                
+                <button class="sp" type="submit"><b>Submit</b></button><br>
+            </div>
+        </form>
+        <h1 class="center">Your Text In ASCCII ART</h1>
+        
+
+      
+            <pre class="arttext">
+{{.ASCIIArt}}</pre>
+
+         <br>
+
+        <div class="center">
+            <button class="clear" ><a href="/">clear</a></button>
+        </div>
+        </body>
+      
+       
+</html>
