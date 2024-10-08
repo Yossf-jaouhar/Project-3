@@ -3,8 +3,7 @@
 ## Description
 This project generates ASCII art using user-provided text and a selected banner style. The web interface allows users to input text and choose from available banners to generate ASCII representations.
 
-## Authors
-- Zakaria DIOURI
+## Author
 - Youssef JAOUHAR
 
 ## Usage
