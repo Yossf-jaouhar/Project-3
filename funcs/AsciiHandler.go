@@ -1,15 +1,19 @@
 package funcs
+
 import (
 	"log"
 	"net/http"
 	"text/template"
 )
+
 type PageData struct {
 	ASCIIArt string
 	Text     string
 	Banner   string
 }
+
 var data = &PageData{Banner: "standard"}
+
 func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 	// Only accept POST requests
 	if r.Method != http.MethodPost {
@@ -60,8 +64,8 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 	data.Banner = banner
 	tmpl, err := template.ParseFiles("Templates/index.html")
 	if err != nil {
-		w.WriteHeader(http.StatusNotFound)
-		http.ServeFile(w, r, "Templates/err404.html")
+		w.WriteHeader(http.StatusInternalServerError)
+		http.ServeFile(w, r, "Templates/err500.html")
 		log.Printf("Template parsing error: %v", err)
 		return
 	}
