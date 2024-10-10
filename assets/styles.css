@@ -17,7 +17,7 @@ body {
     border: solid gray 5px;
     width: 30%;
     height: 100px;
-    text-wrap: nowrap;
+    text-wrap: nowrap;  
     padding: 10px;
     
 }
@@ -25,14 +25,6 @@ body {
     border: 5px rgb(0, 176, 189) solid;
 }
 
-.arttext{
-    text-align: left;
-    margin-top: auto;
-    margin-left: 5%;
-    margin-right: auto;
-    margin-bottom: auto;
-    color: rgb(255, 255, 255);
-}
 
 .sc {
    display:inline-block;
@@ -57,4 +49,39 @@ body {
 
 .clear:hover {
     background-color: rgb(15, 122, 19);
+}
+
+
+.you{
+    width: 90%;
+    padding: 15px; 
+    resize: none;
+    background-color: rgba(57, 122, 117, 0.507);
+    text-align: left;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;  
+    border: solid gray 5px;
+    width: 70%;
+    height: 180px;
+    text-wrap: nowrap;
+    padding: 10px;
+}
+
+.download {
+    display: inline-block;
+    background-color: #348336;
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    text-align: center;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+
+
+.download:hover {
+    background-color: #495a49; 
 }

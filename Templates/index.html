@@ -37,20 +37,26 @@
                     <label for="banner3">Thinkertoy</label>
                 </div>
                 
-                <button class="sp" type="submit"><b>Submit</b></button><br>
+                <button  class="download" type="submit"><b>Submit</b></button><br>
             </div>
         </form>
         <h1 class="center">Your Text In ASCCII ART</h1>
-        
 
-      
-            <pre class="arttext">
-{{.ASCIIArt}}</pre>
 
-         <br>
+         <form action="/Download" method="POST"> 
+          <div class="center">
+            <textarea class="you" name="arttext" value="arttext" readonly>
+{{.ASCIIArt}}</textarea>
+        </div>
+           <div class="center">   
+            <button class="download" type="download">Download</button> 
+           </div>  
+        </form>
 
+
+        <br>
         <div class="center">
-            <button class="clear" ><a href="/">clear</a></button>
+            <button  class="download"><a href="/">clear</a></button>
         </div>
         </body>
       
